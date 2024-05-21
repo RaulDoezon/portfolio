@@ -1,0 +1,46 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  height: 60px;
+  background-color: var(--black-color);
+  padding: 0 22px;
+}
+
+.header-title {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-size: clamp(25px, calc(25px + (32 - 25) * ((100vw - 360px) / (768 - 360))), 32px);
+  letter-spacing: 1px;
+  color: var(--highlight-color);
+}
+
+.header-navigation-list {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 12px;
+  list-style: none;
+}
+
+.header-navigation-link {
+  display: flex;
+}
+
+.header-navigation-icon {
+  width: auto;
+  height: 20px;
+  color: var(--white-color);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--highlight-color);
+    }
+  }
+
+  &:active {
+    color: var(--highlight-color);
+  }
+}

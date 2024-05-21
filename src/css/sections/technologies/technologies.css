@@ -1,0 +1,33 @@
+.technologies {
+  background-color: var(--background-color);
+}
+
+.technologies-description {
+  --section-description-color: var(--white-color);
+}
+
+.technologies-grid {
+  --elements-per-column: 2;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(var(--elements-per-column), 1fr);
+  grid-gap: 40px 20px;
+  margin: 0 auto;
+}
+
+.technology-icon {
+  display: block;
+  width: auto;
+  height: 80px;
+  margin: 0 auto;
+  animation: flush 5s ease-in-out infinite;
+}
+
+.technology-name {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 360px) / (768 - 360))), 24px);
+  letter-spacing: 1.2px;
+  color: var(--white-color);
+}

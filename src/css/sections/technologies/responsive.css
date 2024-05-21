@@ -1,0 +1,24 @@
+@media (width >= 481px) {
+  .technologies-grid {
+    --elements-per-column: 3;
+    grid-column-gap: 34px;
+    max-width: 561px;
+  }
+}
+
+@media (width >= 768px) {
+  .technologies-grid {
+    grid-gap: 60px;
+  }
+
+  .technology-icon {
+    height: 100px;
+  }
+}
+
+@media (width >= 1200px) {
+  .technologies-grid {
+    --elements-per-column: 5;
+    max-width: 975px;
+  }
+}

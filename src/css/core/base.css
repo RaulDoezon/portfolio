@@ -1,0 +1,144 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: 16px;
+
+  &,
+  & * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.full-width-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.section-padding {
+  --section-vertical-padding: 40px;
+  --section-horizontal-padding: 22px;
+  padding: var(--section-vertical-padding) var(--section-horizontal-padding);
+  scroll-margin-top: 60px;
+}
+
+.section-header {
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.section-heading + .section-description {
+  margin-top: 15px;
+}
+
+.section-heading {
+  text-align: center;
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-size: clamp(42px, calc(42px + (58 - 42) * ((100vw - 360px) / (768 - 360))), 58px);
+  color: var(--green-color);
+  letter-spacing: 1px;
+}
+
+.section-description {
+  --section-description-color: var(--black-color);
+  text-align: center;
+  font-weight: 400;
+  font-size: clamp(18px, calc(18px + (22 - 18) * ((100vw - 360px) / (767 - 360))), 22px);
+  color: var(--section-description-color);
+}
+
+.swiper {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+
+  &.swiper-initialized {
+    opacity: 1;
+  }
+}
+
+.rich-text {
+  color: var(--white-color);
+
+  & * {
+    font-size: clamp(16px, calc(16px + (20 - 16) * ((100vw - 360px) / (768 - 360))), 20px);
+    line-height: clamp(23px, calc(23px + (29 - 23) * ((100vw - 360px) / (768 - 360))), 29px);
+  }
+
+  & p {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & ul {
+    padding-left: 36px;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 48px;
+  padding: 0 40px;
+  background-color: var(--highlight-color);
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-color);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--black-color);
+    }
+  }
+
+  &:active {
+    background-color: var(--black-color);
+  }
+}
+
+@media (width >= 768px) {
+  .section-padding {
+    --section-vertical-padding: 80px;
+    --section-horizontal-padding: 40px;
+  }
+
+  .section-header {
+    margin-bottom: 80px;
+  }
+
+  .section-heading {
+    min-width: max-content;
+  }
+}
