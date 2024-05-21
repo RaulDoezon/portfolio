@@ -1,0 +1,28 @@
+.about {
+  --section-horizontal-padding: 0;
+  --section-vertical-padding: 0;
+  background-color: var(--background-color);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 100%;
+}
+
+.about-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-content {
+  margin: 0 auto;
+}
+
+.about-button {
+  margin-top: 40px;
+}

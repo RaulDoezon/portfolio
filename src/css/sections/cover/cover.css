@@ -1,0 +1,52 @@
+.cover {
+  --cover-general-space: 40px;
+  background: linear-gradient(var(--black-color), var(--background-color), var(--green-color));
+  padding: var(--cover-general-space) 24px 0;
+  scroll-margin-top: 60px;
+}
+
+.cover-header {
+  margin-bottom: var(--cover-general-space);
+  text-align: center;
+}
+
+.cover-title {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-size: clamp(42px, calc(42px + (80 - 42) * ((100vw - 360px) / (768 - 360))), 80px);
+  word-break: keep-all;
+  letter-spacing: 1px;
+  color: var(--white-color);
+
+  & span {
+    color: var(--green-color);
+  }
+}
+
+.cover-images-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: appearance 1s linear;
+}
+
+.cover-image {
+  display: flex;
+  width: 100%;
+  animation: flicker 3s ease-in-out infinite alternate;
+}
+
+.cover-image--main {
+  position: relative;
+  z-index: 1;
+}
+
+.cover-image--layer {
+  position: absolute;
+  bottom: 0;
+  animation-delay: 3s;
+}
+
+.cover-image--hidden {
+  visibility: hidden;
+}
